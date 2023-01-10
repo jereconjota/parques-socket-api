@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,11 +11,13 @@
     body {
         padding: 4rem;
     }
+
     hr {
         margin: 2rem 0;
         width: 20%;
     }
 </style>
+
 <body>
 
     <form id="form">
@@ -34,8 +37,7 @@
     <!-- socket.io -->
     <script type="module">
         import { io } from "https://cdn.socket.io/4.4.1/socket.io.esm.min.js";
-      
-        const socket = io('https://parques-socket-api.vercel.app/');
+        const socket = io();
 
         const form = document.getElementById('form');
         const input = document.getElementById('videoName');
@@ -54,4 +56,5 @@
 
     </script>
 </body>
+
 </html>
