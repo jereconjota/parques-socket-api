@@ -2,18 +2,18 @@ const express = require('express');
 const app = express();
 const http = require('http');
 const server = http.createServer(app);
-const cors = require('cors');
+// const cors = require('cors');
 // socket.io 
 const { Server } = require("socket.io");
 const io = new Server(server);
 
-const corsOptions = {
-    origin: '*',
-    credentials: true,
-    methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE'],
-  };
+// const corsOptions = {
+//     origin: '*',
+//     credentials: true,
+//     methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE'],
+//   };
   
-  app.use('*', cors(corsOptions));
+//   app.use('*', cors(corsOptions));
 
 io.on('connection', (socket) => {
     console.log('a user connected');
